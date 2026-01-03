@@ -1,0 +1,234 @@
+{
+  "metadata": {
+    "version": 1,
+    "root": "/mnt/c/Users/Administrator/OneDrive/Skrivbord/MD Reader/md-reader",
+    "createdAt": "2026-01-03T13:04:34.201Z",
+    "updatedAt": "2026-01-03T13:04:34.201Z",
+    "totalFiles": 6
+  },
+  "tree": {
+    "name": "md-reader",
+    "type": "dir",
+    "children": [
+      {
+        "name": "src",
+        "type": "dir",
+        "children": [
+          {
+            "name": "App.tsx",
+            "type": "file"
+          },
+          {
+            "name": "main.tsx",
+            "type": "file"
+          },
+          {
+            "name": "vite-env.d.ts",
+            "type": "file"
+          }
+        ]
+      },
+      {
+        "name": "src-tauri",
+        "type": "dir",
+        "children": [
+          {
+            "name": "target",
+            "type": "dir",
+            "children": [
+              {
+                "name": "release",
+                "type": "dir",
+                "children": [
+                  {
+                    "name": "build",
+                    "type": "dir",
+                    "children": [
+                      {
+                        "name": "md-reader-8f5e4a36fbbdb24e",
+                        "type": "dir",
+                        "children": [
+                          {
+                            "name": "out",
+                            "type": "dir",
+                            "children": [
+                              {
+                                "name": "tauri-codegen-assets",
+                                "type": "dir",
+                                "children": [
+                                  {
+                                    "name": "4530d4b53cf2d539aea7139dc0f48461073d2e1d56eafc443a29f7911393b383.js",
+                                    "type": "file"
+                                  }
+                                ]
+                              },
+                              {
+                                "name": "__global-api-script.js",
+                                "type": "file"
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "vite.config.ts",
+        "type": "file"
+      }
+    ]
+  },
+  "nodes": [
+    "src-tauri/target/release/build/md-reader-8f5e4a36fbbdb24e/out/__global-api-script.js",
+    "src-tauri/target/release/build/md-reader-8f5e4a36fbbdb24e/out/tauri-codegen-assets/4530d4b53cf2d539aea7139dc0f48461073d2e1d56eafc443a29f7911393b383.js",
+    "src/App.tsx",
+    "src/main.tsx",
+    "src/vite-env.d.ts",
+    "vite.config.ts"
+  ],
+  "edges": [
+    {
+      "from": "src/main.tsx",
+      "to": "src/App.tsx"
+    }
+  ],
+  "files": {
+    "src-tauri/target/release/build/md-reader-8f5e4a36fbbdb24e/out/__global-api-script.js": {
+      "imports": [],
+      "dependencies": [],
+      "functions": [],
+      "classes": [],
+      "constants": []
+    },
+    "src-tauri/target/release/build/md-reader-8f5e4a36fbbdb24e/out/tauri-codegen-assets/4530d4b53cf2d539aea7139dc0f48461073d2e1d56eafc443a29f7911393b383.js": {
+      "imports": [],
+      "dependencies": [],
+      "functions": [],
+      "classes": [],
+      "constants": []
+    },
+    "src/App.tsx": {
+      "imports": [
+        {
+          "from": "react",
+          "kind": "import",
+          "imported": [
+            "useEffect",
+            "useState",
+            "useMemo"
+          ]
+        },
+        {
+          "from": "@tauri-apps/api/core",
+          "kind": "import",
+          "imported": [
+            "invoke"
+          ]
+        },
+        {
+          "from": "react-markdown",
+          "kind": "import",
+          "isDefault": true
+        },
+        {
+          "from": "remark-gfm",
+          "kind": "import",
+          "isDefault": true
+        },
+        {
+          "from": "rehype-highlight",
+          "kind": "import",
+          "isDefault": true
+        },
+        {
+          "from": "rehype-slug",
+          "kind": "import",
+          "isDefault": true
+        },
+        {
+          "from": "highlight.js/styles/github-dark.css",
+          "kind": "import"
+        },
+        {
+          "from": "./App.css",
+          "kind": "import"
+        }
+      ],
+      "dependencies": [],
+      "functions": [
+        {
+          "name": "App",
+          "params": [],
+          "isAsync": false,
+          "isExported": false
+        }
+      ],
+      "classes": [],
+      "constants": []
+    },
+    "src/main.tsx": {
+      "imports": [
+        {
+          "from": "react",
+          "kind": "import",
+          "isDefault": true
+        },
+        {
+          "from": "react-dom/client",
+          "kind": "import",
+          "isDefault": true
+        },
+        {
+          "from": "./App",
+          "kind": "import",
+          "isDefault": true
+        }
+      ],
+      "dependencies": [
+        "src/App.tsx"
+      ],
+      "functions": [],
+      "classes": [],
+      "constants": []
+    },
+    "src/vite-env.d.ts": {
+      "imports": [],
+      "dependencies": [],
+      "functions": [],
+      "classes": [],
+      "constants": []
+    },
+    "vite.config.ts": {
+      "imports": [
+        {
+          "from": "vite",
+          "kind": "import",
+          "imported": [
+            "defineConfig"
+          ]
+        },
+        {
+          "from": "@vitejs/plugin-react",
+          "kind": "import",
+          "isDefault": true
+        }
+      ],
+      "dependencies": [],
+      "functions": [],
+      "classes": [],
+      "constants": [
+        {
+          "name": "host",
+          "initKind": "unknown",
+          "isExported": false
+        }
+      ]
+    }
+  }
+}
