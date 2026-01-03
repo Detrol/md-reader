@@ -53,6 +53,33 @@ function App() {
     loadInitialFile();
   }, []);
 
+  // Check for external file changes when window gains focus
+  useEffect(() => {
+    const handleFocus = async () => {
+      if (!filePath) return;
+
+      try {
+        const changed = await invoke<boolean>("check_file_changed");
+        if (changed) {
+          const reload = window.confirm(
+            "Filen har ändrats externt. Vill du ladda om den?"
+          );
+          if (reload) {
+            loadFile(filePath);
+          } else {
+            // User dismissed - update timestamp so we don't ask again
+            await invoke("dismiss_file_change");
+          }
+        }
+      } catch (err) {
+        console.error("Failed to check file changes:", err);
+      }
+    };
+
+    window.addEventListener("focus", handleFocus);
+    return () => window.removeEventListener("focus", handleFocus);
+  }, [filePath]);
+
   async function loadFile(path: string) {
     try {
       const fileContent = await invoke<string>("read_file", { path });

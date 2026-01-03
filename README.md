@@ -8,6 +8,7 @@ A lightweight, fast Markdown viewer for Windows. Simply double-click any `.md` f
 - **Syntax Highlighting** - Code blocks with automatic language detection
 - **Dark/Light Mode** - Follows system preference with manual toggle
 - **Table of Contents** - Auto-generated navigation for long documents
+- **Auto-reload** - Detects external file changes and prompts to reload
 - **File Association** - Optional integration with Windows Explorer
 - **Context Menu** - Right-click any `.md` file to "Open with MD Reader"
 - **Lightweight** - Small ~5MB installer, fast startup
